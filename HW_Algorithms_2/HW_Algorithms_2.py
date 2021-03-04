@@ -10,21 +10,14 @@ def fib(num):
     while i < num - 2:
         result.append(int(result[-1]) + int(result[-2]))
         i += 1
-    return *result,
+    # return *result,
+    return result
 
 
 # print(fib(4))
+# print(fib(10))
 
 
-# Zeros for heroes
-    # Takes out all the zeros
-# def zeros(num):
-#     num = str(num)[::-1]
-#     result = ''
-#     for digit in num:
-#         if int(digit) != 0:
-#             result += digit
-#     return int(result[::-1])
 def zeros(num):
     num = str(num)
     i = 0
@@ -35,9 +28,7 @@ def zeros(num):
     return num
 
 
-# print(print(zeros(300400)))
-
-
+# print(zeros(300400))
 # print(zeros(3400))
 
 
@@ -60,6 +51,7 @@ def rec_sum_of_digits(num):
         return rec_sum_of_digits(result)
 
 
+# print(rec_sum_of_digits(11188822287))
 # print(rec_sum_of_digits(132189))
 
 
@@ -70,6 +62,19 @@ def highest_common_divisor(n1, n2):
         if n1 % i == 0 and n2 % i == 0:
             result.append(i)
         i += 1
-    return *result,
+    # return *result,
+    return result[-1]
+
 
 # print(highest_common_divisor(24, 56))
+# print(highest_common_divisor(20, 86))
+
+def divisor_list(n):
+    result = []
+    i = 1
+    while i < n:
+        if n % i == 0:
+            result.append(i)
+        i += 1
+    return result
+
